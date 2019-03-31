@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
 		scoreManager = FindObjectOfType<ScoreManager>();
     }
 
+    private void Update()
+    {
+        timeText.text = Mathf.Round(scoreManager.GetCurrentTime()).ToString();
+    }
+
     IEnumerator ReloadScene()
     {
         yield return new WaitForSeconds(3.0f);
