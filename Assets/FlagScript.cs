@@ -28,7 +28,7 @@ public class FlagScript : MonoBehaviour
         if (isPlayEnabled)
         {
             isPlayEnabled = false;
-            StartCoroutine(Example());
+            // StartCoroutine(Example());
             finish.Play();
         }
     }
