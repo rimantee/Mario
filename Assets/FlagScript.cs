@@ -6,7 +6,8 @@ using UnityEngine.Playables;
 
 public class FlagScript : MonoBehaviour
 {
-    public PlayableDirector finish;
+    public PlayableDirector finishDirector;
+    public PlayableDirector fireworkDirector;
     public Animation firework;
 
     public bool isPlayEnabled = true;
@@ -29,7 +30,8 @@ public class FlagScript : MonoBehaviour
         {
             isPlayEnabled = false;
             // StartCoroutine(Example());
-            finish.Play();
+            finishDirector.Play();
+            fireworkDirector.Play();
         }
     }
     
