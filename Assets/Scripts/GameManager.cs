@@ -19,16 +19,19 @@ public class GameManager : MonoBehaviour
     AudioSource source;
 	ScoreManager scoreManager;
 
-    void Awake()
-    {
-        source = GetComponent<AudioSource>();
-		scoreManager = FindObjectOfType<ScoreManager>();
-    }
 
-    private void Update()
+	void Awake()
+	{
+		source = GetComponent<AudioSource>();
+		scoreManager = FindObjectOfType<ScoreManager>();
+	}
+
+	private void Update()
     {
-        timeText.text = Mathf.Round(scoreManager.GetCurrentTime()).ToString();
-    }
+		timeText.text = Mathf.Round(scoreManager.GetCurrentTime()).ToString();
+		coinsText.text = "x" + scoreManager.GetCoins();
+		scoreText.text = scoreManager.GetScore().ToString();
+	}
 
     IEnumerator ReloadScene()
     {
