@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 		scoreManager = FindObjectOfType<ScoreManager>();
 	}
 
-	private void Update()
+	void Update()
     {
 		timeText.text = Mathf.Round(scoreManager.GetCurrentTime()).ToString();
 		coinsText.text = "x" + scoreManager.GetCoins();
